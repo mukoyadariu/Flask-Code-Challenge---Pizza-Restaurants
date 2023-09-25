@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>{{ restaurant.name }}</title>
+    </head>
+
+    <body>
+        <h1>{{ restaurant.name }}</h1>
+        <p>Address: {{ restaurant.address }}</p>
+        <h2>Pizzas</h2>
+        <ul>
+            {% for pizza in restaurant.pizzas %}
+            <li>{{ pizza.name }} - Price: ${{ pizza.restaurant_pizza.price }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('restaurants') }}">Back to Restaurants</a>
+    </body>
+
+</html>
