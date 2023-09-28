@@ -5,10 +5,12 @@ Flask
 Flask-Migrate
 Flask-SQLAlchemy
 greenlet
+gunicorn
 itsdangerous
 Jinja2
 Mako
 MarkupSafe
+packaging
 psycopg2-binary
 SQLAlchemy
 typing_extensions
