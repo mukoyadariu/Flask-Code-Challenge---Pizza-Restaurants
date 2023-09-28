@@ -2,6 +2,11 @@ from flask import jsonify, request, abort
 from app import app, db
 from models import Restaurant, Pizza, RestaurantPizza
 
+# Define a route for the root URL ("/") to display a welcome message.
+@app.route('/')
+def welcome():
+    return jsonify({'message': 'Welcome to the Pizza Restaurant Management System!'})
+
 @app.route('/restaurants', methods=['GET'])
 def get_restaurants():
     restaurants = Restaurant.query.all()
@@ -46,3 +51,6 @@ def create_restaurant_pizza():
     db.session.commit()
 
     return jsonify(Pizza.query.get(pizza_id).serialize())
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8007)

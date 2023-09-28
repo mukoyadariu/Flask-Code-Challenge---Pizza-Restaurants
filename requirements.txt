@@ -9,7 +9,7 @@ itsdangerous
 Jinja2
 Mako
 MarkupSafe
+psycopg2-binary
 SQLAlchemy
 typing_extensions
 Werkzeug
-gunicorn
